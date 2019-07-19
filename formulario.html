@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html"/>
+    <meta charset="utf-8" /> 
+    <title>Punto vive digital</title>
+    <link rel="icon" type="text/ico"href="Imagines/logoVentana.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+   
+    
+</head>
+<body background= "Imagines/fondo.jpg">
+    
+
+
+<form action="agregar.php" method="POST"> 
+        <div id="content" align="right"> <a href="Login/index.html"><img class="logo1" src="Imagines/login.png"  width="60" height="60" alt="Iniciar sesión" ></a></div>       
+        <div id="content" align="center"> 
+        <img src="Imagines/logo.png" align="center" class="logo" width="20%" >  
+        <hr style="color: #444;"/> 
+        <div class="styletable">
+                <div align=right class="tamañoreloj" name="Horayfecha"> 
+                        <h2><a href="https://www.zeitverschiebung.net/es/country/co"></a></h2> 
+                         <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=medium&timezone=America%2FBogota"  height="25%" frameborder="0"></iframe> 
+                         
+                         <table width="255" height="150" align="center" cellpadding="1" cellspacing="1" class="bordetable">
+                             
+                         <tr><td>
+                         <h2 align="center">&nbsp;Sitios autorizados </h2><div>
+                             <br>
+                              <tr><th><a href="https://goo.gl/maps/C7EpjoNY7LVo4Jk1A"><img src="Imagines/ubicacion.png"></a>&nbsp;&nbsp;<h2>La Grama</h2></th></tr>   
+                               <tr><th><a href="https://goo.gl/maps/ZZML7aRd94JBvzRC7"><img src="Imagines/ubicacion.png"></a>&nbsp;&nbsp;<h2>Playa Rica</h2></th></tr>
+                               <tr><th><a href="https://goo.gl/maps/UhRPjyu9nqkoKyyBA"><img src="Imagines/ubicacion.png"></a>&nbsp;<h2>Villa Fabiola</h2></th></tr> 
+                            </div></td></tr></table>
+                        </div>
+                        <label><input  type="datetime" name="fecha" value="<?= $fecha_actual?>" style="visibility:hidden"></label>
+               
+        <table class="tabla1"> 
+                <tr>
+            <td><label><h2>Barrio donde se presta el servicio: </label></td><td><select class="select-css" name="opcBarrio"  style="width:185px" required>
+                    <option value="" name="">Seleccione una opción</option>
+                    <option value="La grama" name="La Grama">La Grama</option>
+                    <option  value="Playa Rica" name="Playa Rica">Playa Rica</option>
+                    <option value="Villa Fabiola" name="Villa Fabiola">Villa Fabiola</option>
+                </select></h2><br></td>
+                <br>
+            </tr>
+        
+            <tr><td><br></td></tr>
+        
+        <tr>
+            <td><label><h2>Nombre completo: </label></td><td><input type="text" name="nombre" maxlength="50"  placeholder="Introduzca su nombre" required></h2></td>
+        
+        </tr>
+       
+        <tr>
+        <td><label><h2>Apellido completo: </label></td><td><input type="text" name="apellido" maxlength="50" placeholder="Introduzca su apellido" required></h2></td>
+        <br>
+        </tr>
+        
+        <tr><td><br></td></tr>
+        
+        <tr>
+        <td><label><h2>Tipo de identificación: </label></td><td><select class="select-css" name="TipoId"  style="width:185px" required>
+            <option value="" name="">Seleccione una opción</option>
+            <option value="Tarjeta de Identidad" name="T.Id">Tarjeta de identidad</option>
+            <option  value="Cédula de Ciudadania" name="Cedula">Cédula de ciudadania</option>
+            <option value="Tarjeta Pasaporte" name="T.Pasa">Tarjeta pasaporte</option>
+            <option value="Registro Civil" name="Reg.Civil">Registro Civil</option>
+        </select></h2><br></td>
+        </tr>
+        <tr><td><br></td></tr>
+        <tr>
+        <td><label><h2>No. de identificación: </label></td><td><input type="text" name="numeroId" id="numero"  placeholder="Introduzca el numero de identificación" required></h2></td>
+        </tr>
+      
+        <tr>
+        <td><label><h2 >Genero: </label></td><td>
+            <div class="containerOuter">
+              <div class="container">
+                <input type="radio" value="Hombre" class="hidden" id="input1" name="genero" required="required">
+                <label class="entry" name="inputs" for="input1"><div class="circle"></div><div class="entry-label">Hombre</div></label>
+                <input type="radio" value="Mujer" class="hidden" id="input2" name="genero">
+                <label class="entry"  name="inputs" for="input2"><div class="circle"></div><div class="entry-label">Mujer</div></label>
+                <div class="highlight"></div>
+                <div class="overlay"></div>
+              </div>
+            </div>
+            <svg width="0" height="0">
+              <defs>
+                <mask id="holes">
+                  <rect x="0" y="0" fill="white" />
+                  <circle r="12" cx="20" cy="20" fill="black"/>
+                  <circle r="12" cx="20" cy="70" fill="black"/>
+                  <circle r="12" cx="20" cy="120" fill="black"/>
+                </mask>
+              </defs>
+            </svg>
+          </h2>
+        </td><br>
+        </tr>
+    
+        <tr><td><br></td></tr>
+        
+        <tr>
+            <td><label><h2>Orientación sexual: </label></td><td><select class="select-css" name="OriSex"  style="width:185px" required>
+                    <option value="" name="">Seleccione una opción</option>
+                    <option value="Heterosexual" name="Heterosexual">Heterosexual </option>
+                    <option  value="Gay" name="Gay">Gay </option>
+                    <option value="Bisexual" name="Bisexual">Bisexual </option>
+                    <option value="Transgenerista" name="Transgenerista">Transgenerista</option>
+                    <option value="Intersexual" name="Intersexual">Intersexual</option>
+                    <option value="Lesbiana" name="lesbiana">Lesbiana</option>
+                </select></h2></td>
+                <br>
+            </tr>
+     
+            <tr><td><br></td></tr>
+
+        <tr>
+            <td><label><h2>Situación de la población: </label></td><td><select class="select-css" name="SituPobla"  style="width:185px" required>
+                    <option value="" name="">Seleccione una opción</option>
+                    <option value="Ninguno" name="ninguno">Ninguno</option>
+                    <option value="En situación de discapacidad" name="SituDisca">En situación de discapacidad</option>
+                    <option value="Desmovilizado" name="Desmo">Desmovilizado</option>
+                    <option value="Gestante" name="Gestan">Gestante</option>
+                    <option value="Mujer/Hombre cabeza de hogar">Mujer/Hombre cabeza de hogar</option>
+                    <option value="Adulto mayor" name="AdulMay">Adulto mayor</option>
+                </select></h2></td>
+                <br>
+            </tr>
+        
+        <tr><td><br></td></tr>
+        
+        <tr>
+        <td><label><h2>Grupo étnico: </label></td><td><select class="select-css" name="GrupoEtnico"  style="width:185px" required>
+                <option value="" name="">Seleccione una opción</option>
+                <option value="Ninguno" name="NOpli">Ninguno</option>
+                <option value="Indigena" name="Indig">Indigena</option>
+                <option  value="Afrodescendiente" name="NoA">Afrodescendiente</option>
+                <option value="Raizal" name="Raiz">Raizal</option>
+                <option value="Rom name">Rom</option>
+                <option value="Palenquero" name="Palenque">Palenquero</option>
+            </select></h2></td>
+            <br>
+        </tr>
+        
+        <tr><td><br></td></tr>
+          
+        <tr>
+            <td><label><h2 >Victima del conflicto armado: </label></td><td>
+                <input type="checkbox" id="fruit1" name="Victima" value="Desplazamiento" onchange="habilitar(this.checked);" value="Desplazamiento">
+                <label for="fruit1">Desplazamiento</label>
+                <input type="checkbox" id="fruit2" name="Victima" value="Ninguno" onchange="habilitar(this.checked);" value="Ninguno">
+                <label for="fruit2">Ninguno</label>
+                <div>
+                <input required type="text" name="Victima" value="" placeholder="Otro hecho ¿Cuál?" id="entrada">
+                </div>
+          </h2></td>
+                <br>
+            </tr>
+           
+            
+            <tr><td><br></td></tr>
+
+            <tr>
+                <td><label><h2 >Fecha de nacimiento: </label></td><td><input required type="date" name="fecha" id="user_date" style="width:185px" ></td>
+                    <br>
+                    
+                </tr>  
+            <tr><td><br></td></tr>
+             <tr>
+                <td><label><h2>Rango de edad: </label></td><td>
+                    <select class="select-css" name="Edad"  style="width:185px" required>
+                        <option value="" name="">Seleccione una opción</option>
+                        <option value="6 a 11" name="6-11">6 a 11</option>
+                        <option  value="12 a 18" name="Capaci">12 a 18</option>
+                        <option value="19 a 26" name="Video juegos">19 a 26</option>
+                        <option value="27 a 59" name="ConsulRapi">27 a 59</option>
+                        <option value="60 o más" name="ConsulRapi">60 o más</option>
+                    </select></h2>
+                 
+                   </td>
+                </tr> 
+            <tr><td><br></td></tr>
+         <tr>
+                <td><label><h2>Telefono: </label></td><td><input type="tel" name="numerotel" id="numerotel" min="0" max="10"  placeholder="Introduzca el numero telefonico" required></h2></td>
+                </tr>
+                <tr><td><br></td></tr>
+        <tr>	
+        <td><label><h2>Servicio a solicitar: </label></td><td><SELECT name="Servicios" style="width:185px" required onchange="if(this.value=='Capacitación') {document.getElementById('CapacitaciónRealizada').disabled = false} else {document.getElementById('CapacitaciónRealizada').disabled = true} ">
+            <option value="" name="">Seleccione una opción</option>
+            <option value="Acceso a internet" name="AI">Acceso a Internet</option>
+            <option  value="Capacitación" name="Capaci">Capacitación</option>
+            <option value="Video juegos" name="Video juegos">Video Juegos</option>
+            <option value="Consultas rapidas" name="ConsulRapi">Consultas Rapidas</option>
+            </SELECT></td></tr>
+             <br>
+             
+             <tr><td><label><h2>Si su respuesta fue Capacitación, <br> por favor indicanos el evento</h2></label></td><td>
+                <br><input type="text" id="CapacitaciónRealizada" name="ServiciosCap" value="" placeholder="¿Que capacitación realizo?" disabled></h2>
+             </td></tr>
+                    
+                    
+        <tr><td><br></td></tr>
+            
+                    <tr>
+                    <td align="center" colspan="2"><input type="submit" name="Enviar" value="Enviar" class="button1" alt="imagen" width="32" height="32" style="vertical-align: middle">
+                      </form></td>
+
+                   
+                    </td>
+                    <td><img class="img2"src="Imagines/logo1.png" style="position:absolute;bot:0px;right:0px;" width="20%" height="20%"></td></tr> 
+                    
+                    
+                </table>
+	
+</body>
+</head>
+</html>
+
+<script type="text/javascript">
+
+    	function alerta(mensaje, tiempo) {
+  var alerta = $("<div/>")
+    .addClass("alert alert-danger alerta")
+    .html(mensaje)
+    .delay(tiempo + 2000)
+    .fadeOut(2000, function() {
+      $(this).remove();
+    });
+  $('#alertas').prepend(alerta);
+}
+
+$('#boton').click(function() {
+    alerta("¡¡Holaaaaa!!", 1000);
+});
+
+
+    function isValidDate(day,month,year)
+    {
+        var dteDate;
+     
+        month=month-1;
+       
+        dteDate=new Date(year,month,day);
+     
+        
+        return ((day==dteDate.getDate()) && (month==dteDate.getMonth()) && (year==dteDate.getFullYear()));
+    }
+     
+    
+    function validate_fecha(fecha)
+    {
+        var patron=new RegExp("^(19|20)+([0-9]{2})([-])([0-9]{1,2})([-])([0-9]{1,2})$");
+     
+        if(fecha.search(patron)==0)
+        {
+            var values=fecha.split("-");
+            if(isValidDate(values[2],values[1],values[0]))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+     
+    /*
+    function calcularEdad()
+    {
+        var fecha=document.getElementById("user_date").value;
+        if(validate_fecha(fecha)==true)
+        {
+            
+            var values=fecha.split("-");
+            var dia = values[2];
+            var mes = values[1];
+            var ano = values[0];
+     
+            
+            var fecha_hoy = new Date();
+            var ahora_ano = fecha_hoy.getYear();
+            var ahora_mes = fecha_hoy.getMonth()+1;
+            var ahora_dia = fecha_hoy.getDate();
+     
+           
+            var edad = (ahora_ano + 1900) - ano;
+            if ( ahora_mes < mes )
+            {
+                edad--;
+            }
+            if ((mes == ahora_mes) && (ahora_dia < dia))
+            {
+                edad--;
+            }
+            if (edad > 1900)
+            {
+                edad -= 1900;
+            }
+     
+            document.getElementById("result").innerHTML=+edad;
+        }else{
+            document.getElementById("result").innerHTML="La fecha "+fecha+" es incorrecta";
+        }
+    }*/
+    function habilitar(value)
+    {
+        if(value==true)
+        {
+            // habilitamos
+            document.getElementById("entrada").disabled=true;
+        }else if(value==false){
+            // deshabilitamos
+            document.getElementById("entrada").disabled=false;
+        }
+    }
+    </script>
+<style type="text/css">
+
+    
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+
+.showOverlay {
+  bottom: 0;
+  display: flex;
+  font-size: 16px;
+  left: calc(50% - 55px);
+  margin-bottom: 7px;
+  position: absolute;
+}
+.check {
+  bottom: 0;
+  display: flex;
+  left: calc(50% + 40px);
+  margin-bottom: 10px;
+  position: absolute;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 160px;
+  margin-bottom: -80px;
+}
+.hidden {
+  display: none;
+}
+.entry {
+  height: 25px;
+  position: absolute;
+  width: 160px;
+}
+.entry:nth-child(2) {
+  left: 8px;
+  top: 8px;
+}
+.entry:nth-child(4) {
+  left: 8px;
+  top: 58px;
+}
+.entry:nth-child(6) {
+  left: 8px;
+  top: 108px;
+}
+.circle {
+  border: 2px solid #545556;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  transition: border-color 300ms;
+  width: 20px;
+}
+.entry-label {
+  cursor: pointer;
+  margin-top: 5px;
+  padding-left: 40px;
+  user-select: none;
+  -moz-user-select: none;
+}
+.overlay {
+ 
+  mask: url(#holes);
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAACMCAYAAAAOc+uVAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAItSURBVHic7ZnNjhJBFIVPA0txr0Iyw+tIdOXWaDRufZWZeYbZuMKOUV9Gg+HHGN/BHBcNcSBT1KVOEVycb0mq635UVd9U5zQkif+Y3rkFclhQxYIqFlQZiM8vALQAPgP4AWC1+X0E4ALAFMBzAOPiCixjRfIdyX5g/h7JFyTnJYVKBGckHxQsxJBke2rBK5LF55bdal6fSnCmyO1JhlcyKrhkwbYekBySXNcUfF1L7o7k20jhhsxetxYAJk3T/Kks2EfXmkaHxkXO1MfacgCwmbPNjYsIftV1knzJDYgIfqsgkuJ7bkBE8FcFkRTr3IBzXxay9SOCjyuIFM8dEZxUECmeOyL4tIJIimluQKRRLwFcnqBRDwDMUaFRjwG8quC0zxtk5ACEL6wrksNaZiQfkvwZKRxtM08AfGDgBh2Q6wG4BfAo+sAxXB/xp+6VI3lzTMGSK3/Lgu1mt62fji1W+tH0m+R7dm9iZNVeMnjm9om0mUOs8O+zc47dz84Juh76DJG3NYEqeHLOfVnIYkEVC6pYUMWCKhZUsaCKBVUsqGJBFQuqWFDFgipO3OnEfRcn7qWCTtxTOHFP4cS9Ek7cVZy4qzhxL4ZO3AXoxF2QoxP3DifuW5y4q1hQxYIqFlSxoIoFVSyoYkEVC6pYUMWCKhZUsaCKE3c6cd/FiXupoBP3FE7cUzhxr4QTdxUn7ipO3IuhE3cBOnEX5OjEvcOJ+xYn7ioWVLGgigVV/gKEL4RSyM8Z8wAAAABJRU5ErkJggg==);
+  height: 140px;
+  pointer-events: none;
+  transition: background 300ms;
+  width: 40px;
+}
+.highlight {
+  background: #4D98EF;
+  border-radius: 50%;
+  height: 12px;
+  left: 14px;
+  pointer-events: none;
+  position: absolute;
+  top: 14px;
+  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.2);
+  transform: translateY(-50px);
+  width: 12px;
+}
+.hidden:nth-child(1):checked ~ .highlight {
+  transform: translateY(0);
+}
+.hidden:nth-child(3):checked ~ .highlight {
+  transform: translateY(50px);
+}
+.hidden:nth-child(5):checked ~ .highlight {
+  transform: translateY(100px);
+}
+.hidden:nth-child(1):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+.hidden:nth-child(3):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+.hidden:nth-child(5):checked + .entry .circle {
+  border-color: #4D98EF;
+}
+	*{
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+    padding: 0px;
+    margin: 0px;
+    border:none;
+    width: 100%;
+}
+
+#header{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow:hidden;
+}
+
+#footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow:hidden;
+}
+.bordetable{
+    border-radius: 30px;
+background: rgb(206,220,231); 
+background: -moz-radial-gradient(center, ellipse cover, rgba(206,220,231,1) 80%, rgba(89,106,114,1) 100%); 
+background: -webkit-radial-gradient(center, ellipse cover, rgba(206,220,231,1) 80%,rgba(89,106,114,1) 100%); 
+background: radial-gradient(ellipse at center, rgba(206,220,231,1) 80%,rgba(89,106,114,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=1 ); 
+}
+
+#formulario{
+    margin: 0 auto;
+    align-content: center;
+    border-radius: 10px;
+    border: 1px solid #666666;
+    width: 500px;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+    font-size: 14px;
+}
+
+input {
+    font-size: 14px;
+}
+
+input[type="text"] {
+    
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+}
+input[type="tel"] {
+    
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+}
+input[type="text"]:focus {
+    border-color:#0088B2;
+    box-shadow: 0 0 8px 0 #0088B2
+}
+input[type="tel"]:focus {
+    border-color:#0088B2;
+    box-shadow: 0 0 8px 0 #0088B2
+}
+input[type="date"] {
+    
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+}
+input[type="date"]:focus {
+    border-color:#0088B2;
+    box-shadow: 0 0 8px 0 #0088B2
+}
+input[type="submit"],input[type="button"]{
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #0088B2;
+    color: #fff;
+    padding: 8px 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.select-css {
+
+	font-size: 13px;
+	font-family: 'Arial', sans-serif;
+	font-weight: 200;
+	color: #444;
+	line-height: 1.3;
+	padding: .4em 1.4em .3em .8em;
+	width: 400px;
+	max-width: 100%; 
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
+	border-radius: .3em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+.select-css::-ms-expand {
+	display: none;
+}
+.select-css:hover {
+	border-color: #888;
+}
+.select-css:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222; 
+	outline: none;
+}
+.select-css option {
+	font-weight:normal;
+}
+
+textarea{
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #777;
+    max-width: 100%;
+    outline: none;
+    padding: 7px 8px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background: #444;
+}
+
+h2 {
+    font: oblique bold 120% cursive;
+}
+
+
+.logo{
+    position: relative;
+  left: -110px;
+  top: -45px;
+  display: block; 
+  margin: 0 auto;
+  max-width: 100%;  
+}
+.logo1{
+    
+    position: relative;
+  right: -40%;
+  top: 50px;
+  display: block; 
+  margin: 0 auto;
+  max-width: 100%; 
+   
+}
+img2 {
+    position: relative;
+    display: block; 
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+}
+.button1, .button2 .btn-abrir-popup{
+    
+    font-weight: 600p;
+    font-size: 15px;
+    border-radius: 6px;
+    
+  }
+  .tamañoreloj{ 
+width:33%; 
+float: right;
+position: relative; 
+  top: 40px;     
+  height:auto;
+  display: block;
+  margin: 0 auto;
+}
+.tabla1{
+    width:67%; 
+float: center;  
+     
+  height:auto;
+  display: block;
+  margin: 0 auto;
+}
+.styletable{
+   width:85%; 
+float: center;
+position: relative;
+  top: -50px;
+}
+
+</style>
+
